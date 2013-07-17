@@ -1,4 +1,4 @@
-
+<!--Controlled by BoggleCtrl -->
   <div class="container">
     <div class="row">
       <div class="span4">
@@ -6,8 +6,8 @@
             <input type="text" placeholder="Enter word…">
             <button type="submit" class="btn">Submit</button>
         </form>
-        <div class="alert alert-error hidden">error</div>  
- 
+        <div class="alert alert-error hidden">error</div>
+
         <table class="table table-striped">
           <tr>
             <th>Word</th>
@@ -27,7 +27,7 @@
           </tr>
         </table>
       </div>
-  
+
 
       <div class="span8">
         <div class="row-fluid boogle-board-controlelrs">
@@ -40,33 +40,20 @@
           <div class="span12">
             <table class="boogle-board">
               <tr>
-                <td>A</td>
-                <td>C</td>
-                <td>D</td>
-                <td>N</td>
+                <td ng-repeat="character in horizontal[0]">{{ character }}</td>
               </tr>
-              <tr>
-                <td>E</td>
-                <td>P</td>
-                <td>M</td>
-                <td>I</td>
+			  <tr>
+				<td ng-repeat="character in horizontal[1]">{{ character }}</td>
               </tr>
-              <tr>
-                <td>G</td>
-                <td>N</td>
-                <td>T</td>
-                <td>C</td>
+			  <tr>
+				<td ng-repeat="character in horizontal[2]">{{ character }}</td>
               </tr>
-              <tr>
-                <td>B</td>
-                <td>A</td>
-                <td>C</td>
-                <td>D</td>
+			  <tr>
+				<td ng-repeat="character in horizontal[3]">{{ character }}</td>
               </tr>
             </table>
           </div>
         </div>
-
       </div>
     </div>
   </div>
